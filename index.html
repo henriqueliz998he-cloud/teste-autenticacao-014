@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teste #014 — Autenticação em 3 Etapas</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+
+        <header class="cabecalho">
+
+            <p class="numero-teste">
+                🧪 TESTE #014
+            </p>
+
+            <h1>
+                Autenticação em 3 Etapas
+            </h1>
+
+            <p class="descricao">
+                Senha + biometria + palavra-chave.
+            </p>
+
+        </header>
+
+
+        <!-- ================================================= -->
+        <!-- ETAPA 1 -->
+        <!-- ================================================= -->
+
+        <section
+            id="etapa1"
+            class="tela"
+        >
+
+            <div class="icone">
+                🔐
+            </div>
+
+            <p class="etapa">
+                ETAPA 1 DE 3
+            </p>
+
+            <h2>
+                Primeira senha
+            </h2>
+
+            <p class="texto">
+                Digite a primeira senha para continuar.
+            </p>
+
+
+            <form id="formPrimeiraSenha">
+
+                <label for="primeiraSenha">
+                    Senha
+                </label>
+
+                <input
+                    id="primeiraSenha"
+                    type="password"
+                    autocomplete="off"
+                    placeholder="Digite a senha"
+                >
+
+                <button
+                    type="submit"
+                    class="botao principal"
+                >
+                    CONTINUAR
+                </button>
+
+            </form>
+
+
+            <p
+                id="erroPrimeiraSenha"
+                class="mensagem erro escondido"
+            >
+                ❌ Senha incorreta.
+            </p>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- ETAPA 2 -->
+        <!-- ================================================= -->
+
+        <section
+            id="etapa2"
+            class="tela escondido"
+        >
+
+            <div class="icone">
+                📱
+            </div>
+
+            <p class="etapa">
+                ETAPA 2 DE 3
+            </p>
+
+            <h2>
+                Verificação biométrica
+            </h2>
+
+            <p class="texto">
+                Use a biometria do aparelho para continuar.
+            </p>
+
+
+            <div class="biometria-card">
+
+                <div
+                    id="iconeBiometria"
+                    class="icone-biometria"
+                >
+                    🔐
+                </div>
+
+                <h3>
+                    Autenticador do dispositivo
+                </h3>
+
+                <p
+                    id="statusBiometria"
+                    class="status"
+                >
+                    Pronto para verificar.
+                </p>
+
+
+                <button
+                    id="botaoBiometria"
+                    type="button"
+                    class="botao biometria"
+                >
+                    📱 USAR BIOMETRIA
+                </button>
+
+
+                <p
+                    id="mensagemBiometria"
+                    class="mensagem escondido"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- ETAPA 3 -->
+        <!-- ================================================= -->
+
+        <section
+            id="etapa3"
+            class="tela escondido"
+        >
+
+            <div class="icone">
+                🎤
+            </div>
+
+            <p class="etapa">
+                ETAPA 3 DE 3
+            </p>
+
+            <h2>
+                Palavra-chave
+            </h2>
+
+            <p class="texto">
+                Clique no microfone e fale a palavra-chave.
+            </p>
+
+
+            <div class="voz-card">
+
+                <div class="palavra-esperada">
+                    Palavra-chave:
+                    <strong>
+                        "Henrique"
+                    </strong>
+                </div>
+
+
+                <button
+                    id="botaoMicrofone"
+                    type="button"
+                    class="botao microfone"
+                >
+                    🎤 FALAR PALAVRA-CHAVE
+                </button>
+
+
+                <p
+                    id="statusVoz"
+                    class="status"
+                >
+                    Aguardando...
+                </p>
+
+
+                <div class="resultado-voz">
+
+                    <span>
+                        Palavra detectada
+                    </span>
+
+                    <strong id="palavraDetectada">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <p
+                    id="erroMicrofone"
+                    class="mensagem erro escondido"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- ACESSO LIBERADO -->
+        <!-- ================================================= -->
+
+        <section
+            id="areaLiberada"
+            class="tela sucesso escondido"
+        >
+
+            <div class="icone grande">
+                ✅
+            </div>
+
+            <p class="etapa">
+                AUTENTICAÇÃO CONCLUÍDA
+            </p>
+
+            <h2>
+                Acesso liberado!
+            </h2>
+
+            <p class="texto">
+                As três etapas foram concluídas com sucesso.
+            </p>
+
+
+            <div class="etapas-confirmadas">
+
+                <div class="confirmacao">
+
+                    <span>
+                        🔐
+                    </span>
+
+                    <div>
+                        <small>
+                            ETAPA 1
+                        </small>
+
+                        <strong>
+                            Senha
+                        </strong>
+                    </div>
+
+                    <b>
+                        ✓
+                    </b>
+
+                </div>
+
+
+                <div class="confirmacao">
+
+                    <span>
+                        📱
+                    </span>
+
+                    <div>
+                        <small>
+                            ETAPA 2
+                        </small>
+
+                        <strong>
+                            Biometria
+                        </strong>
+                    </div>
+
+                    <b>
+                        ✓
+                    </b>
+
+                </div>
+
+
+                <div class="confirmacao">
+
+                    <span>
+                        🎤
+                    </span>
+
+                    <div>
+                        <small>
+                            ETAPA 3
+                        </small>
+
+                        <strong>
+                            Palavra-chave
+                        </strong>
+                    </div>
+
+                    <b>
+                        ✓
+                    </b>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                #014 — Autenticação em 3 Etapas
+            </p>
+
+            <p>
+                GitHub Pages • Experimento local
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+                      </html>
